@@ -16,7 +16,7 @@ const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 
-export default class Home extends React.Component {
+export default class PostEdit extends React.Component {
 
   _onHomePress = () => {
     Alert.alert(
@@ -28,12 +28,13 @@ export default class Home extends React.Component {
     );
   }
 
+
   render() {
     return (
       <SafeAreaView style={{ flex: 1 }}>
         <ImageBackground
           style={{ height }}
-          source={require('../assets/images/jac.png')}
+          source={require('../assets/images/fondo6.jpg')}
         >
           <View style={{ flexDirection: 'column', height, justifyContent: 'center' }}>
             <View style={{ flexDirection: 'row' }}>
@@ -46,10 +47,7 @@ export default class Home extends React.Component {
                 </Text>
               </TouchableOpacity>
 
-              <TouchableOpacity
-                onPress={() => this.props.navigation.navigate("Profile")}
-                style={[styles.button, { backgroundColor: 'rgba(238, 0, 238, 0.5)' }]}
-              >
+              <TouchableOpacity style={[styles.button, { backgroundColor: 'rgba(238, 0, 238, 0.5)' }]}>
                 <Text style={styles.text}>
                   Perfil
                 </Text>
@@ -57,19 +55,13 @@ export default class Home extends React.Component {
             </View>
 
             <View style={{ flexDirection: 'row', }}>
-              <TouchableOpacity
-                onPress={() => this.props.navigation.navigate("Posts")}
-                style={[styles.button, { backgroundColor: 'rgba(255, 165, 0, 0.5)' }]}
-              >
+              <TouchableOpacity style={[styles.button, { backgroundColor: 'rgba(255, 165, 0, 0.5)' }]}>
                 <Text style={styles.text}>
                   Posteos
                 </Text>
               </TouchableOpacity>
 
-              <TouchableOpacity
-                onPress={() => this.props.navigation.navigate("map")}
-                style={[styles.button, { backgroundColor: 'rgba(0, 165, 188, 0.8)' }]}
-              >
+              <TouchableOpacity style={[styles.button, { backgroundColor: 'rgba(0, 165, 188, 0.8)' }]}>
                 <Text style={styles.text}>
                   Mapa
                 </Text>
